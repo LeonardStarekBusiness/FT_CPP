@@ -1,10 +1,10 @@
-NAME = ex00
+NAME = ex03
 
 CFLAGGEN = -Wall -Wextra -Werror -std=c++98
 
 CC = c++
 
-QUELLE_DATEIEN = Zombie.cpp newZombie.cpp randomChump.cpp main.cpp
+QUELLE_DATEIEN = HumanB.cpp HumanA.cpp Weapon.cpp main.cpp
 
 OBJEKT_DATEIEN = $(QUELLE_DATEIEN:.cpp=.o)
 
@@ -25,4 +25,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean flcean re
+.PHONY: all clean fclean re

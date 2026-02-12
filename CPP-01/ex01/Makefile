@@ -1,10 +1,10 @@
-NAME = ex00
+NAME = ex01
 
 CFLAGGEN = -Wall -Wextra -Werror -std=c++98
 
 CC = c++
 
-QUELLE_DATEIEN = Zombie.cpp newZombie.cpp randomChump.cpp main.cpp
+QUELLE_DATEIEN = Zombie.cpp zombieHorde.cpp main.cpp
 
 OBJEKT_DATEIEN = $(QUELLE_DATEIEN:.cpp=.o)
 
