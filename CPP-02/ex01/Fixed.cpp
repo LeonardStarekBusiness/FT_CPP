@@ -34,7 +34,7 @@ Fixed &Fixed::operator=(const Fixed other)
 
 std::ostream& operator<<(std::ostream &stream, const Fixed &other)
 {
-    stream << other.value/256.0;
+    stream << other.toFloat();
     return stream;
 }
 
@@ -57,7 +57,7 @@ void Fixed::setRawBits(int const raw)
 
 float Fixed::toFloat(void) const
 {
-    return ((float)(value>>bits));
+    return (value/256.0);
 }
 
 int Fixed::toInt(void) const
