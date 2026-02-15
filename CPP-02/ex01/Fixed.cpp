@@ -9,13 +9,13 @@ Fixed::Fixed()
 Fixed::Fixed(const int raw)
 {
     std::cout << "Int Parameter constructor called" << std::endl;
-    value = raw;
+    value = raw<<bits;
 }
 
 Fixed::Fixed(const float raw)
 {
     std::cout << "Float Parameter constructor called" << std::endl;
-    value = roundf(raw);
+    value = (int)(raw*256);
 }
 
 Fixed::Fixed(const Fixed &other)
@@ -34,7 +34,7 @@ Fixed &Fixed::operator=(const Fixed other)
 
 std::ostream& operator<<(std::ostream &stream, const Fixed &other)
 {
-    stream << other.value;
+    stream << other.value/256.0;
     return stream;
 }
 
@@ -57,10 +57,10 @@ void Fixed::setRawBits(int const raw)
 
 float Fixed::toFloat(void) const
 {
-    return ((float)value);
+    return ((float)(value>>bits));
 }
 
 int Fixed::toInt(void) const
 {
-    return (value);
+    return (value>>bits);
 }
