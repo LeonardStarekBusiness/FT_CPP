@@ -1,6 +1,8 @@
 #include <iostream>
 #include "Fixed.hpp"
 
+//stream insertion overload fixen
+
 int main(void)
 {
     Fixed a;
