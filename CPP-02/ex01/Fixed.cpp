@@ -38,6 +38,7 @@ std::ostream& operator<<(std::ostream &stream, const Fixed &other)
     return stream;
 }
 
+
 Fixed::~Fixed()
 {
     std::cout << "Destructor called" << std::endl;
