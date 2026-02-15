@@ -34,7 +34,7 @@ Fixed &Fixed::operator=(const Fixed other)
 
 std::ostream& operator<<(std::ostream &stream, const Fixed &other)
 {
-    stream.put(other.value);
+    stream << other.value;
     return stream;
 }
 
