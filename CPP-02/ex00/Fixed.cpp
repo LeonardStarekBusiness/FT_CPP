@@ -19,6 +19,7 @@ Fixed &Fixed::operator=(const Fixed other)
     value = other.value;
     return (*this);
 }
+
 Fixed::~Fixed()
 {
     std::cout << "Destructor called" << std::endl;

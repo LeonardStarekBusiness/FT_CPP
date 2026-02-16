@@ -13,7 +13,7 @@ public:
     Fixed(const float raw);
     Fixed(const Fixed &other);
     Fixed &operator=(const Fixed other);
-    friend std::ostream &operator<<(std::ostream &stream, const Fixed &other);
+
     ~Fixed();
 
     int getRawBits(void) const;
@@ -21,3 +21,5 @@ public:
     float toFloat(void) const;
     int toInt(void) const;
 };
+
+std::ostream &operator<<(std::ostream &stream, const Fixed &other);
